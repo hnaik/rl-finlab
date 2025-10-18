@@ -37,6 +37,7 @@
         "**/.cache": true,
         "**/.cache/*": true,
         "**/*.egg-info": true,
+        "**/.pixi": true,
     },
     "files.associations": {
         "*.toml": "toml",

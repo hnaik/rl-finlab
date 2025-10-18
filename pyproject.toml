@@ -19,19 +19,34 @@ platforms = ["osx-64"]
 rl-finlab = { path = ".", editable = true }
 
 [tool.pixi.dependencies]
-ruff = ">=0.14.1,<0.15"
-pytorch = ">=2.8.0,<3"
-polars = ">=1.34.0,<2"
-jupyterlab = ">=4.4.9,<5"
-marimo = ">=0.16.5,<0.17"
-numpy = ">=1.23"
-pandas = ">=2.3.3,<3"
-gymnasium = ">=1.2.1,<2"
-matplotlib = ">=3.10.7,<4"
+python = "==3.11"
+ruff = "*"
+pytorch = "*"
+polars = "*"
+jupyterlab = "*"
+marimo = "*"
+numpy = "*"
+pandas = "*"
+gymnasium = "*"
+matplotlib = "*"
 stable-baselines3 = "*"
-yfinance = ">=0.2.57,<0.3"
-pyyaml = ">=6.0.3,<7"
+yfinance = "*"
+pyyaml = "*"
 
 [tool.pixi.tasks]
-train_exec = "python -m src.agents.sb3_ppo_exec --config experiments/exec_reward_ablation.yaml"
-train_alloc = "python -m src.agents.sb3_sac_alloc --config experiments/alloc_risk_reward.yaml"
+
+[tool.pixi.tasks.train_exec]
+cmd = [
+    "python",
+    "-mapps.sb3_ppo_exec",
+    "--config=experiments/exec_reward_ablation.toml"
+]
+env = { PYTHONPATH = ".:./src" }
+
+[tool.pixi.tasks.train_alloc]
+cmd = [
+    "python",
+    "-mapps.sb3_sac_alloc",
+    "--config=experiments/alloc_risk_reward.toml"
+]
+env = { PYTHONPATH = ".:./src" }
