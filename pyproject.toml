@@ -1,0 +1,28 @@
+[project]
+name = "rl-finlab"
+description = "Reinforcement Learning Finance Laboratory"
+version = "0.1.0"
+
+[tool.ruff]
+line-length = 79
+
+[tool.ruff.lint]
+
+[tool.ruff.format]
+quote-style = "single"
+
+[tool.pixi.workspace]
+channels = ["conda-forge"]
+platforms = ["osx-64"]
+
+[tool.pixi.pypi-dependencies]
+rl-finlab = { path = ".", editable = true }
+
+[tool.pixi.tasks]
+
+[tool.pixi.dependencies]
+ruff = ">=0.14.1,<0.15"
+pytorch = ">=2.8.0,<3"
+polars = ">=1.34.0,<2"
+jupyterlab = ">=4.4.9,<5"
+marimo = ">=0.16.5,<0.17"

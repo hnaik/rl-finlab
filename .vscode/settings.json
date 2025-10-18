@@ -1,0 +1,59 @@
+{
+    "workbench.tree.indent": 16,
+    "editor.formatOnSave": true,
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.formatOnSave": true,
+        "editor.rulers": [
+            80
+        ]
+    },
+    "watchdog.exclude": [
+        "**/*.pyc",
+        "**/*.pyo",
+        "**/*.pyd",
+        "**/*.pyw",
+        "**/*.pyz",
+        "**/*.pywz",
+        "**/*.pyzw",
+        "**/*.pyzwz"
+    ],
+    "watcher.exclude": [
+        "**/*.pyc",
+        "**/*.pyo",
+        "**/*.pyd",
+        "**/*.pyw",
+        "**/*.pyz",
+        "**/*.pywz",
+        "**/*.pyzw",
+        "**/*.pyzwz"
+    ],
+    "search.exclude": {
+        "**/*.pyc": true,
+        "**/*.pyo": true,
+        "**/*.pyd": true,
+        "**/*.pyw": true,
+        "**/*.pyz": true,
+        "**/*.pywz": true,
+        "**/*.pyzw": true,
+        "**/*.pyzwz": true
+    },
+    "files.exclude": {
+        "**/*.pyc": true,
+        "**/*.pyo": true,
+        "**/*.pyd": true,
+        "**/*.pyw": true,
+        "**/*.pyz": true,
+        "**/*.pywz": true,
+        "**/*.pyzw": true,
+        "**/*.pyzwz": true,
+        "**/__pycache__": true,
+        "**/.ruff_cache": true,
+        "**/.pytest_cache": true,
+        "**/.coverage": true,
+        "**/.coverage.*": true,
+        "**/.cache": true,
+        "**/.cache/*": true,
+        "**/*.egg-info": true,
+    }
+}
