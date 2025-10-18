@@ -1,33 +1,15 @@
 {
     "workbench.tree.indent": 16,
-    "editor.formatOnSave": true,
     "[python]": {
         "editor.defaultFormatter": "charliermarsh.ruff",
         "editor.formatOnSave": true,
         "editor.rulers": [
             80
-        ]
+        ],
+        "editor.codeActionsOnSave": {
+            "source.fixAll.ruff": "always"
+        }
     },
-    "watchdog.exclude": [
-        "**/*.pyc",
-        "**/*.pyo",
-        "**/*.pyd",
-        "**/*.pyw",
-        "**/*.pyz",
-        "**/*.pywz",
-        "**/*.pyzw",
-        "**/*.pyzwz"
-    ],
-    "watcher.exclude": [
-        "**/*.pyc",
-        "**/*.pyo",
-        "**/*.pyd",
-        "**/*.pyw",
-        "**/*.pyz",
-        "**/*.pywz",
-        "**/*.pyzw",
-        "**/*.pyzwz"
-    ],
     "search.exclude": {
         "**/*.pyc": true,
         "**/*.pyo": true,
@@ -55,5 +37,11 @@
         "**/.cache": true,
         "**/.cache/*": true,
         "**/*.egg-info": true,
+    },
+    "files.associations": {
+        "*.toml": "toml",
+        "COPYING": "plaintext",
+        "COPYING.LESSER": "plaintext",
+        "*.py": "python"
     }
 }
